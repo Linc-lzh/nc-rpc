@@ -65,7 +65,6 @@ public class ServerHandler extends ChannelInboundHandlerAdapter{
             UserService userService = new UserService();
             ret = userService.addUser(user);
 
-
             //构造返回数据
             RpcProtocol rpcResp = new RpcProtocol();
             rpcResp.setCmd(rpcReq.getCmd());

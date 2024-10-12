@@ -58,7 +58,6 @@ public class RpcProtocol {
         return this;
     }
 
-
     public byte[] generateByteArray()
     {
         byte[] data = new byte[HEAD_LEN + bodyLen];
@@ -100,7 +99,6 @@ public class RpcProtocol {
         return this;
     }
 
-
     public User byteArrayToUserInfo(byte[] data)
     {
         User user = new User();
@@ -129,7 +127,6 @@ public class RpcProtocol {
         return data;
     }
 
-
     public static Object bytes2Object(byte[] objBytes) throws Exception {
         if (objBytes == null || objBytes.length == 0) {
             return null;
@@ -153,7 +150,6 @@ public class RpcProtocol {
         oo.close();
         return bo.toByteArray();
     }
-
 
     public byte[] createUserRespTobyteArray(int result)
     {

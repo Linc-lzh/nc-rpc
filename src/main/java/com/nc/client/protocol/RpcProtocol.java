@@ -151,9 +151,6 @@ public class RpcProtocol {
         return bo.toByteArray();
     }
 
-
-
-
     public byte[] createUserRespTobyteArray(int result)
     {
         byte[] data = new byte[Integer.BYTES];

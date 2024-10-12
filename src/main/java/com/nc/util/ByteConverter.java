@@ -35,7 +35,6 @@ public class ByteConverter {
                 | (((long) buf[7] << 56) & 0xff00000000000000l);
     }
 
-
     public static byte[] shortToBytes(short n) {
         byte[] buf = new byte[2];
         for (int i = 0; i < buf.length; i++) {
