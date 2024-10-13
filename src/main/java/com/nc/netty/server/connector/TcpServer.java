@@ -1,4 +1,4 @@
-package com.nc.server.connector;
+package com.nc.netty.server.connector;
 
 import com.nc.util.PkgDecoder;
 import io.netty.bootstrap.ServerBootstrap;

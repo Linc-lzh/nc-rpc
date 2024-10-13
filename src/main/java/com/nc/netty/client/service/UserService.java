@@ -1,7 +1,7 @@
-package com.nc.client.service;
-import com.nc.client.connector.TcpClient;
-import com.nc.client.entity.User;
-import com.nc.client.protocol.RpcProtocol;
+package com.nc.netty.client.service;
+import com.nc.netty.client.connector.TcpClient;
+import com.nc.netty.client.entity.User;
+import com.nc.netty.client.protocol.RpcProtocol;
 import com.nc.util.ByteConverter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

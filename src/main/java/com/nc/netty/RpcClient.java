@@ -1,7 +1,7 @@
-package com.nc;
+package com.nc.netty;
 
-import com.nc.client.entity.User;
-import com.nc.client.service.UserService;
+import com.nc.netty.client.entity.User;
+import com.nc.netty.client.service.UserService;
 public class RpcClient {
     public static void main(String[] args) throws Exception {
         UserService proxyUserService = new UserService();

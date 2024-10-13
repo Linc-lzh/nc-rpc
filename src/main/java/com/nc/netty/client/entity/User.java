@@ -1,4 +1,4 @@
-package com.nc.client.entity;
+package com.nc.netty.client.entity;
 
 import java.io.Serializable;
 

@@ -1,6 +1,6 @@
-package com.nc.server.service;
+package com.nc.netty.server.service;
 
-import com.nc.server.entity.User;
+import com.nc.netty.server.entity.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 public class UserService {

@@ -1,5 +1,5 @@
 package com.nc.util;
-import com.nc.client.protocol.RpcProtocol;
+import com.nc.netty.client.protocol.RpcProtocol;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.ByteToMessageDecoder;

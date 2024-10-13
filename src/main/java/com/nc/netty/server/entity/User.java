@@ -1,4 +1,4 @@
-package com.nc.server.entity;
+package com.nc.netty.server.entity;
 
 public class User {
     private long uid;

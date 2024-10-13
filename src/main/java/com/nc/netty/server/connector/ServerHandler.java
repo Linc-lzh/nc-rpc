@@ -1,10 +1,10 @@
-package com.nc.server.connector;
+package com.nc.netty.server.connector;
 
 import java.net.InetSocketAddress;
 
-import com.nc.server.entity.User;
-import com.nc.server.protocol.RpcProtocol;
-import com.nc.server.service.UserService;
+import com.nc.netty.server.entity.User;
+import com.nc.netty.server.protocol.RpcProtocol;
+import com.nc.netty.server.service.UserService;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.Channel;

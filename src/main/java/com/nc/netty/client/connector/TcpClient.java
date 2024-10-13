@@ -1,4 +1,4 @@
-package com.nc.client.connector;
+package com.nc.netty.client.connector;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import java.io.IOException;

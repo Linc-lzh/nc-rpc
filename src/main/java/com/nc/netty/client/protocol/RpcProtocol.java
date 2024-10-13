@@ -1,15 +1,15 @@
-package com.nc.server.protocol;
+package com.nc.netty.client.protocol;
 
-
-import com.nc.server.entity.User;
+import com.nc.netty.client.entity.User;
 import com.nc.util.ByteConverter;
+
 import java.io.*;
 public class RpcProtocol {
-    static public int CONST_CMD_MAGIC = 0x20110711;
+    public static int CMD_CREATE_USER = 1;
     private int version;
     private int cmd;
-    public int magicNum;
-    private int bodyLen;
+    private int magicNum;
+    private int bodyLen = 0;
     private byte[] body;
     final public static int HEAD_LEN = 16;
 
@@ -58,6 +58,7 @@ public class RpcProtocol {
         return this;
     }
 
+
     public byte[] generateByteArray()
     {
         byte[] data = new byte[HEAD_LEN + bodyLen];
@@ -74,13 +75,9 @@ public class RpcProtocol {
         return data;
     }
 
-    public RpcProtocol byteArrayToRpcHeader(byte[] data) throws IOException, ClassNotFoundException {
-        if (data == null || data.length == 0) {
-            return null;
-        }
-
+    public RpcProtocol byteArrayToRpcHeader(byte[] data)
+    {
         int index = 0;
-
         this.setVersion(ByteConverter.bytesToInt(data, index));
         index += Integer.BYTES;
 
@@ -99,6 +96,7 @@ public class RpcProtocol {
         return this;
     }
 
+
     public User byteArrayToUserInfo(byte[] data)
     {
         User user = new User();
@@ -115,6 +113,7 @@ public class RpcProtocol {
         return user;
     }
 
+
     public byte[] userInfoTobyteArray(User info)
     {
         byte[] data = new byte[Long.BYTES + Short.BYTES + Short.BYTES];
@@ -126,6 +125,7 @@ public class RpcProtocol {
         System.arraycopy(ByteConverter.shortToBytes(info.getSex()), 0, data, index, Short.BYTES);
         return data;
     }
+
 
     public static Object bytes2Object(byte[] objBytes) throws Exception {
         if (objBytes == null || objBytes.length == 0) {

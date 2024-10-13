@@ -1,6 +1,6 @@
-package com.nc;
+package com.nc.netty;
 
-import com.nc.server.connector.TcpServer;
+import com.nc.netty.server.connector.TcpServer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 public class RpcServer {
